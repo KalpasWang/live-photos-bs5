@@ -1,6 +1,6 @@
 // 需要載入的
 @import "functions";
-@import "helper/_variables";
+@import "helper/variables";
 @import "bootstrap";
 
 // 各個頁面
@@ -20,4 +20,4 @@
 // @import "components/custom-bs5";  // Bootstrap 5 調整
 
 // 通用類別
-// @import "components/utilities";
+@import "custom-utilities";

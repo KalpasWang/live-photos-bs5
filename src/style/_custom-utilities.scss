@@ -1,0 +1,13 @@
+$spacing: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+);
+
+@each $n, $value in $spacing {
+  .spacing-#{$n} {
+    letter-spacing: #{$value};
+  }
+}
