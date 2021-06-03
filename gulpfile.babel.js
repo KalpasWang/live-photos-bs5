@@ -144,7 +144,7 @@ export function imageMin() {
     .src('./src/assets/*')
     .pipe($.if(envIsPro, $.imagemin()))
     .pipe(gulp.dest('./dist/assets'))
-    .pipe($.if(envIsPro, browserSync.stream()));
+    .pipe($.if(!envIsPro, browserSync.stream()));
 }
 
 /*****************************************************
@@ -179,6 +179,11 @@ exports.default = gulp.parallel(
   browser,
   watch
 );
+
+// exports.default = gulp.series(
+//   gulp.series(clean, copy),
+//   gulp.parallel(vendorJS, babel, sass, ejs, imageMin, browser, watch)
+// );
 
 exports.build = gulp.series(
   gulp.series(clean, copy),

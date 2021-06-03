@@ -67,29 +67,32 @@ $colors: (
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$primary:       #ffdf65; // $blue !default;
+$secondary:     #858377; // $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$dark:          #636057; // $gray-900 !default;
+$grey:          #eeeeee;
+$accent:        #ff785e;
+$darkened:      #494846;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 // 修改顏色
 $theme-colors: (
-  "primary":    #ffdf65, // $primary,
-  "secondary":  #858377, // $secondary,
+  "primary":    $primary,
+  "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       #636057, // $dark
-  "grey":       #eeeeee,
-  "accent":     #ff785e
+  "dark":       $dark,
+  "grey":       $grey,
+  "accent":     $accent,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -283,7 +286,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                #494846; // $gray-900 !default;
+$body-color:                $darkened; // $gray-900 !default;
 $body-text-align:           null !default;
 
 
@@ -291,7 +294,7 @@ $body-text-align:           null !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+$link-color:                              $dark; // $primary !default;
 $link-decoration:                         none; // underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
@@ -923,22 +926,22 @@ $zindex-tooltip:                    1080 !default;
 // 修改 navs
 
 // scss-docs-start nav-variables
-$nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-y:                1.5rem; // .5rem !default;
+$nav-link-padding-x:                1.25rem; // 1rem !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              null !default;
-$nav-link-color:                    #636057; // $link-color !default;
+$nav-link-color:                    $link-color !default;
 $nav-link-hover-color:              $link-hover-color !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
-$nav-tabs-border-color:             $gray-300 !default;
-$nav-tabs-border-width:             $border-width !default;
+$nav-tabs-border-color:             null; // $gray-300 !default;
+$nav-tabs-border-width:             0; // $border-width !default;
 $nav-tabs-border-radius:            $border-radius !default;
-$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-700 !default;
+$nav-tabs-link-hover-border-color:  null; // $gray-200 $gray-200 $nav-tabs-border-color !default;
+$nav-tabs-link-active-color:        $link-color; // $gray-700 !default;
 $nav-tabs-link-active-bg:           $body-bg !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-link-active-border-color: null; // $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
