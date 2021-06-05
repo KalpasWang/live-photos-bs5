@@ -1,24 +1,11 @@
 // 需要載入的
-@import "functions";
-@import "helper/variables";
-@import "bootstrap";
+@import 'functions';
+@import 'helper/variables';
+@import 'bootstrap';
 
-@import "custom-nav-setting";
-// 各個頁面
-// @import "pages/layout.scss";
-// @import "pages/index.scss";
-
-// 區塊式內容
-// @import "components/header";
-// @import "components/section";
-// @import "components/item-card";
-// @import "components/carts";
-
-// 元件
-// @import "components/form-square";
-// @import "components/process-steps";
-// @import "components/interactive"; // 互動元件
-// @import "components/custom-bs5";  // Bootstrap 5 調整
+// 自訂元件設定
+@import 'custom-nav-setting';
+@import 'custom-accordion-setting';
 
 // 通用類別
-@import "custom-utilities";
+@import 'custom-utilities';

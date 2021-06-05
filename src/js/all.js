@@ -11,3 +11,16 @@ var tooltipTriggerList = [].slice.call(
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl);
 });
+
+var accordionBtns = Array.from(
+  document.getElementsByClassName('accordion-button')
+);
+var accordionItems = Array.from(
+  document.getElementsByClassName('accordion-item')
+);
+
+accordionBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.target.parentElement.parentElement.classList.toggle('accordion-shadow');
+  });
+});
