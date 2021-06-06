@@ -1,5 +1,5 @@
 $spacing: (
-  1: 1px,
+  1: 0.7px,
   2: 2px,
   3: 3px,
   4: 4px,
@@ -10,4 +10,14 @@ $spacing: (
   .spacing-#{$n} {
     letter-spacing: #{$value};
   }
+}
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.fw-medium {
+  font-weight: 500;
 }

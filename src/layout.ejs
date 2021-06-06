@@ -480,12 +480,13 @@
             >
               <div class="card mb-3">
                 <div class="row g-0">
-                  <div class="col-auto">
-                    <img
-                      src="https://hexschool.github.io/boootstrap5WebLayout/assets/news01.jpg"
-                      class="img-fluid"
-                    />
-                  </div>
+                  <div
+                    class="col-5 col-md-4 bg-cover"
+                    style="
+                      background-image: url(https://hexschool.github.io/boootstrap5WebLayout/assets/news01.jpg);
+                      max-width: 220px;
+                    "
+                  ></div>
                   <div class="col">
                     <div class="card-body">
                       <div class="mb-2">
@@ -503,13 +504,46 @@
                 </div>
               </div>
             </div>
+            <!-- 留言 -->
             <div
               class="tab-pane fade py-6"
               id="comment"
               role="tabpanel"
               aria-labelledby="comment-tab"
             >
-              comment
+              <div
+                class="bg-info p-3 mb-5 border-start border-3 border-primary"
+              >
+                <p>
+                  只有本專案的贊助者才可以留言哦，如果有任何專案相關的問題，歡迎
+                  <a href="#" class="link-accent">聯絡提案人！</a>
+                </p>
+              </div>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row g-0 mb-3">
+                    <div class="col-auto pe-3">
+                      <img
+                        src="https://hexschool.github.io/boootstrap5WebLayout/assets/user_img01.jpg"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="col">
+                      <h4 class="fs-5 fw-medium spacing-2 mb-1">廖小杰</h4>
+                      <p class="card-subtitle fs-7 spacing-2 text-secondary">
+                        2020年5月22日 11:32
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mb-3 spacing-1">
+                    晚上起床上廁所看到照片裡的人一直動其實有點恐怖，希望可以有暫停或是定時的功能！
+                  </p>
+                  <div class="bg-light p-3 spacing-1">
+                    <p class="fs-7 text-accent">提案者回覆</p>
+                    <p>你要嘛起床的時候開燈，要嘛給我們更多錢開發阿</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-4">sidebar</div>

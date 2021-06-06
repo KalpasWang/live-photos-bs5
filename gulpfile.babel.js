@@ -170,20 +170,20 @@ export function watch() {
 /*****************************************************
  *  指令 block
  *****************************************************/
-exports.default = gulp.parallel(
-  imageMin,
-  babel,
-  vendorJS,
-  sass,
-  ejs,
-  browser,
-  watch
-);
-
-// exports.default = gulp.series(
-//   gulp.series(clean, copy),
-//   gulp.parallel(vendorJS, babel, sass, ejs, imageMin, browser, watch)
+// exports.default = gulp.parallel(
+//   imageMin,
+//   babel,
+//   vendorJS,
+//   sass,
+//   ejs,
+//   browser,
+//   watch
 // );
+
+exports.default = gulp.series(
+  gulp.series(clean, copy),
+  gulp.parallel(vendorJS, babel, sass, ejs, imageMin, browser, watch)
+);
 
 exports.build = gulp.series(
   gulp.series(clean, copy),
