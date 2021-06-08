@@ -12,6 +12,17 @@ $spacing: (
   }
 }
 
+$border-radius-xl: 0.75rem;
+
+.rounded-top-4 {
+  border-top-left-radius: $border-radius-xl;
+  border-top-right-radius: $border-radius-xl;
+}
+
+.font-baloo {
+  font-family: 'Baloo Tamma 2', cursive;
+}
+
 .bg-cover {
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,4 +31,15 @@ $spacing: (
 
 .fw-medium {
   font-weight: 500;
+}
+
+.custom-icon {
+  background: $secondary;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
 }
