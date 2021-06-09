@@ -78,7 +78,7 @@ $dark:          #636057; // $gray-900 !default;
 $grey:          #eeeeee;
 $lightgrey:     #e8e8db;
 $accent:        #ff785e;
-$darkened:      #494846;
+$darkgrey:      #494846;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -95,6 +95,7 @@ $theme-colors: (
   "grey":       $grey,
   "lightgrey":  $lightgrey,
   "accent":     $accent,
+  "darkgrey":   $darkgrey,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -290,7 +291,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $darkened; // $gray-900 !default;
+$body-color:                $darkgrey; // $gray-900 !default;
 $body-text-align:           null !default;
 
 
@@ -708,11 +709,11 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg !default;
 $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
-$input-bg:                              $white !default;
+$input-bg:                              $light; //$white !default;
 $input-disabled-bg:                     $gray-200 !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           $body-color !default;
+$input-color:                           $secondary; //$body-color !default;
 $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;
