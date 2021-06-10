@@ -1,12 +1,12 @@
-// 需要載入的
-@import 'functions';
+// 需要先載入的
+@import "functions";
 @import 'helper/variables';
-@import 'bootstrap';
 
 // 自訂元件設定
-@import 'custom-nav-setting';
-@import 'custom-accordion-setting';
-@import 'custom-button-setting';
+@import 'custom-components-setting';
 
-// 通用類別
+// 自訂通用類別
 @import 'custom-utilities';
+
+// 載入Bootstrap
+@import 'bootstrap';

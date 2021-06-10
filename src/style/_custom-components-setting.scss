@@ -1,0 +1,33 @@
+// nav
+.nav-tabs {
+  & .nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid $primary;
+  }
+
+  & .nav-link:hover {
+    font-weight: bold;
+  }
+}
+
+// accordion
+.accordion-shadow {
+  box-shadow: 0 0 8px 0 rgba(73, 72, 70, 0.15);
+}
+
+// button
+.btn-outline-secondary:hover {
+  color: #fff;
+}
+
+// 社群icon
+.custom-icon {
+  background: $secondary;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
+}

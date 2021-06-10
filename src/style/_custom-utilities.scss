@@ -1,26 +1,31 @@
-$spacing: (
-  1: 0.7px,
-  2: 2px,
-  3: 3px,
-  4: 4px,
-  5: 5px
-);
+$font-baloo: 'Baloo Tamma 2', cursive;
 
-@each $n, $value in $spacing {
-  .spacing-#{$n} {
-    letter-spacing: #{$value};
-  }
-}
+$utilities: (
+  "font-family": (
+    property: font-family,
+    class: font,
+    values: (
+      baloo: $font-baloo,
+    ),
+  ),
+  "letter-spacing": (
+    property: letter-spacing,
+    class: spacing,
+    values: (
+      1: 0.7px,
+      2: 2px,
+      3: 3px,
+      4: 4px,
+      5: 5px
+    ),
+  )
+);
 
 $border-radius-xl: 0.75rem;
 
 .rounded-top-4 {
   border-top-left-radius: $border-radius-xl;
   border-top-right-radius: $border-radius-xl;
-}
-
-.font-baloo {
-  font-family: 'Baloo Tamma 2', cursive;
 }
 
 .bg-cover {
@@ -31,15 +36,4 @@ $border-radius-xl: 0.75rem;
 
 .fw-medium {
   font-weight: 500;
-}
-
-.custom-icon {
-  background: $secondary;
-  color: white;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 30px;
-  vertical-align: middle;
 }
