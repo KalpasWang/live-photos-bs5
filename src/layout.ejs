@@ -36,140 +36,83 @@
     <link rel="stylesheet" href="style/all.css" />
   </head>
   <body>
-    <!-- 登入視窗 -->
-    <div
-      class="modal fade"
-      id="loginModal"
-      tabindex="-1"
-      aria-labelledby="loginModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content border-0 border-top border-4 border-primary">
-          <div class="modal-header">
-            <h4 class="modal-title" id="loginModalLabel">登入</h4>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="my-3">
-                <label for="account" class="form-label">帳號</label>
-                <input type="text" class="form-control bg-light" id="account" />
-              </div>
-              <div class="mb-1">
-                <label for="password" class="form-label">密碼</label>
-                <input
-                  type="text"
-                  class="form-control bg-light"
-                  id="password"
-                />
-              </div>
-              <p><a href="#" class="link-secondary">忘記密碼？</a></p>
-              <div class="mb-7">
-                <button
-                  type="submit"
-                  class="btn btn-primary btn-lg rounded-pill w-100"
-                >
-                  登入
-                </button>
-              </div>
-              <div class="modal-footer position-relative">
-                <p
-                  class="
-                    position-absolute
-                    start-50
-                    translate-middle
-                    bg-white
-                    px-2
-                  "
-                >
-                  還沒有帳號？ <a href="#" class="link-accent">註冊一個帳號</a>
-                </p>
-              </div>
-            </form>
+    <header>
+      <!-- 導覽選單 -->
+      <nav
+        class="
+          navbar navbar-expand-md navbar-light
+          border-bottom border-5 border-primary
+        "
+      >
+        <div class="container">
+          <h1 class="mb-0 d-inline navbar-brand">
+            <a href="#">
+              <img
+                src="https://hexschool.github.io/boootstrap5WebLayout/assets/logo.jpg"
+                alt="logo"
+                style="width: 111px"
+              />
+            </a>
+          </h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarItems"
+            aria-controls="navbarItems"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarItems">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">關於</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">挖寶</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">我有個大膽的想法</a>
+              </li>
+            </ul>
+            <div class="ms-auto">
+              <button
+                class="btn btn-primary rounded-pill px-5 me-3"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                登入
+              </button>
+              <button class="btn btn-outline-secondary rounded-pill px-5">
+                註冊
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- 導覽選單 -->
-    <nav
-      class="
-        navbar navbar-expand-md navbar-light
-        border-bottom border-5 border-primary
-      "
-    >
-      <div class="container">
-        <h1 class="mb-0 d-inline navbar-brand">
-          <a href="#">
-            <img
-              src="https://hexschool.github.io/boootstrap5WebLayout/assets/logo.jpg"
-              alt="logo"
-              style="width: 111px"
-            />
-          </a>
-        </h1>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarItems"
-          aria-controls="navbarItems"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarItems">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">關於</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">挖寶</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">我有個大膽的想法</a>
-            </li>
-          </ul>
-          <div class="ms-auto">
-            <button
-              class="btn btn-primary rounded-pill px-5 me-3"
-              data-bs-toggle="modal"
-              data-bs-target="#loginModal"
-            >
-              登入
-            </button>
-            <button class="btn btn-outline-secondary rounded-pill px-5">
-              註冊
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <!-- 募資簡介 -->
-    <section class="py-5 bg-light">
+    <main class="py-5 bg-light">
       <div class="container">
         <p class="badge bg-secondary fs-7 mb-1">魔法科技</p>
-        <h2 class="spacing-3 mb-4">拍出會動的照片｜LivePhotos 魔法拍立得</h2>
+        <h1 class="h2 spacing-3 mb-4">拍出會動的照片｜LivePhotos 魔法拍立得</h1>
         <div class="row">
           <div class="col-md-7">
             <img
               src="https://hexschool.github.io/boootstrap5WebLayout/assets/produt_image.jpg"
               class="img-fluid rounded"
+              alt="產品照片"
             />
           </div>
           <div class="col-md-5">
-            <p class="fs-7">目標 $600,000</p>
-            <h3 class="fs-2">$280,047</h3>
-            <div class="progress bg-grey">
+            <p class="fs-7 font-baloo">目標 $600,000</p>
+            <h3 class="fs-2 font-baloo fw-semibold">$280,047</h3>
+            <div class="progress bg-grey mb-3">
               <div
-                class="progress-bar bg-primary text-dark"
+                class="progress-bar font-baloo bg-primary text-dark"
                 role="progressbar"
                 style="width: 41%"
                 aria-valuenow="41"
@@ -179,47 +122,53 @@
                 41%
               </div>
             </div>
-            <div class="row">
+            <div class="row mb-3">
               <div class="col">
                 <p class="text-secondary">贊助人數</p>
-                <p class="h2">1374 人</p>
+                <p class="fs-2 font-baloo fw-semibold">1374 人</p>
               </div>
               <div class="col">
                 <p class="text-secondary">募資倒數</p>
-                <p class="h2">27 天</p>
+                <p class="fs-2 font-baloo fw-semibold">27 天</p>
               </div>
             </div>
-            <div class="mb-3">
-              <img
-                src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good01.svg"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="認證標章"
-                class="me-4"
-              /><img
-                src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good02.svg"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="品質保證"
-                class="me-4"
-              /><img
-                src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good03.svg"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="原生創意"
-                class="me-4"
-              /><img
-                src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good04.svg"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="人氣王"
-              />
-            </div>
+            <ul class="list-unstyled d-flex mb-3">
+              <li class="me-4">
+                <img
+                  src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good01.svg"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="認證標章"
+                />
+              </li>
+              <li class="me-4">
+                <img
+                  src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good02.svg"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="品質保證"
+                />
+              </li>
+              <li class="me-4">
+                <img
+                  src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good03.svg"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="原生創意"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good04.svg"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="人氣王"
+                />
+              </li>
+            </ul>
             <div class="bg-white p-3 mb-4 border-start border-3 border-primary">
-              <p class="mb-0">專案募資中！</p>
-              <p class="mb-0">
-                在 2021/06/14 23:59 募資結束前，您都可以贊助我們！
-              </p>
+              <p>專案募資中！</p>
+              <p>在 2021/06/14 23:59 募資結束前，您都可以贊助我們！</p>
             </div>
             <div class="overflow-hidden">
               <div class="mb-2">
@@ -243,7 +192,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- 頁籤 -->
     <section class="border sticky-top bg-white">
@@ -310,7 +259,7 @@
     </section>
 
     <!-- 分頁與側邊欄 -->
-    <main>
+    <article>
       <div class="container overflow-hidden py-5 py-md-6">
         <div class="row g-5 g-md-6">
           <div class="col-md-8">
@@ -769,7 +718,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </article>
 
     <!-- 頁尾 -->
     <footer class="py-5 text-center bg-darkgrey">
@@ -777,6 +726,70 @@
         <p class="text-white">Copyright &copy; 拼拼 All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- 登入視窗 -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content border-0 border-top border-4 border-primary">
+          <div class="modal-header">
+            <h3 class="h4 modal-title" id="loginModalLabel">登入</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="my-3">
+                <label for="account" class="form-label">帳號</label>
+                <input type="text" class="form-control bg-light" id="account" />
+              </div>
+              <div class="mb-1">
+                <label for="password" class="form-label">密碼</label>
+                <input
+                  type="text"
+                  class="form-control bg-light"
+                  id="password"
+                />
+              </div>
+              <p class="mb-3">
+                <a href="#" class="link-secondary">忘記密碼？</a>
+              </p>
+              <div class="mb-7">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg rounded-pill w-100"
+                >
+                  登入
+                </button>
+              </div>
+              <div class="modal-footer position-relative">
+                <p
+                  class="
+                    position-absolute
+                    start-50
+                    translate-middle
+                    bg-white
+                    px-2
+                  "
+                >
+                  還沒有帳號？
+                  <a href="#" class="link-accent">註冊一個帳號</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/vendor.js"></script>
     <script src="js/all.js"></script>

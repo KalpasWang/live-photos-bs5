@@ -1,4 +1,4 @@
-$font-baloo: 'Baloo Tamma 2', cursive;
+$font-baloo: 'Baloo Tamma 2', sans-serif;
 
 $utilities: (
   "font-family": (
@@ -36,4 +36,8 @@ $border-radius-xl: 0.75rem;
 
 .fw-medium {
   font-weight: 500;
+}
+
+.fw-semibold {
+  font-weight: 600;
 }
