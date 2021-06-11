@@ -1,12 +1,10 @@
 // 需要先載入的
 @import "functions";
 @import 'helper/variables';
-
-// 自訂元件設定
-@import 'custom-components-setting';
-
-// 自訂通用類別
 @import 'custom-utilities';
 
 // 載入Bootstrap
 @import 'bootstrap';
+
+// 自訂元件設定
+@import 'custom-components-setting';

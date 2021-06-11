@@ -1,7 +1,8 @@
 $font-baloo: 'Baloo Tamma 2', sans-serif;
+$border-radius-xl: 1rem;
 
 $utilities: (
-  "font-family": (
+  "font-family-addon": (
     property: font-family,
     class: font,
     values: (
@@ -18,26 +19,31 @@ $utilities: (
       4: 4px,
       5: 5px
     ),
-  )
+  ),
+  "rounded-top-addon": (
+    property: border-top-left-radius border-top-right-radius,
+    class: rounded-top,
+    values: (4: $border-radius-xl)
+  ),
+  "font-weight-addon": (
+    property: font-weight,
+    class: fw,
+    values: (
+      medium: 500,
+      semibold: 600,
+    )
+  ),
+  "start-addon": (
+    property: left,
+    class: start,
+    values: (
+      1: 1.25rem,
+    )
+  ),
 );
-
-$border-radius-xl: 0.75rem;
-
-.rounded-top-4 {
-  border-top-left-radius: $border-radius-xl;
-  border-top-right-radius: $border-radius-xl;
-}
 
 .bg-cover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.fw-medium {
-  font-weight: 500;
-}
-
-.fw-semibold {
-  font-weight: 600;
 }

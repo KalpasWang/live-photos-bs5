@@ -16,8 +16,25 @@
 }
 
 // button
-.btn-outline-secondary:hover {
+.btn-primary:hover {
+  background-color: $accent;
+  border-color: $accent;
   color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: $primary;
+  border-color: $primary;
+  
+  & i {
+    color: $accent;
+  }
+}
+
+// form control, form-select
+.form-control:focus, .form-select:focus {
+  border-color: $accent;
+  box-shadow: none;
 }
 
 // 社群icon
@@ -30,4 +47,20 @@
   text-align: center;
   line-height: 30px;
   vertical-align: middle;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: $primary;
+    color: $dark;
+  }
+}
+
+// logo
+.logo {
+  width: 111px;
+}
+
+// 目前進度卡片
+.progress-img {
+  max-width: 220px;
 }
