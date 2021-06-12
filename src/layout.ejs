@@ -195,7 +195,14 @@
                 <p class="fs-2 font-baloo fw-semibold">27 天</p>
               </div>
             </div>
-            <ul class="list-unstyled d-flex mb-3">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-between justify-content-md-start
+                mb-3
+              "
+            >
               <li class="me-4">
                 <img
                   src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_good01.svg"
@@ -203,6 +210,7 @@
                   data-bs-placement="top"
                   title="認證標章"
                 />
+                <span class="d-md-none ms-2 fs-8">認證標章</span>
               </li>
               <li class="me-4">
                 <img
@@ -211,6 +219,7 @@
                   data-bs-placement="top"
                   title="品質保證"
                 />
+                <span class="d-md-none ms-2 fs-8">品質保證</span>
               </li>
               <li class="me-4">
                 <img
@@ -219,6 +228,7 @@
                   data-bs-placement="top"
                   title="原生創意"
                 />
+                <span class="d-md-none ms-2 fs-8">原生創意</span>
               </li>
               <li>
                 <img
@@ -227,6 +237,7 @@
                   data-bs-placement="top"
                   title="人氣王"
                 />
+                <span class="d-md-none ms-2 fs-8">人氣王</span>
               </li>
             </ul>
             <div class="bg-white p-3 mb-4 border-start border-3 border-primary">
@@ -244,12 +255,12 @@
                 </button>
               </div>
               <div class="row g-2">
-                <div class="col-md-7">
+                <div class="col-6 col-md-7">
                   <button class="btn btn-outline-secondary rounded-pill w-100">
                     <i class="fas fa-heart"></i> 追蹤專案
                   </button>
                 </div>
-                <div class="col-md-5">
+                <div class="col-6 col-md-5">
                   <button class="btn btn-outline-secondary rounded-pill w-100">
                     <i class="fas fa-share-alt"></i> 分享
                   </button>
@@ -335,7 +346,7 @@
         <div class="row g-5 g-md-6">
           <div class="col-md-8">
             <!-- 分頁 -->
-            <div class="tab-content mb-6">
+            <div id="tabs" class="tab-content mb-5 mb-md-6">
               <!-- 專案介紹 -->
               <section
                 class="tab-pane fade show active"
@@ -887,8 +898,212 @@
                 </ul>
               </section>
             </div>
+            <div id="sponsor-btn" class="fixed-bottom d-md-none">
+              <button class="btn btn-lg btn-primary w-100 rounded-0">
+                贊助專案
+              </button>
+            </div>
+            <!-- 其他贊助項目 -->
+            <section class="mb-5 d-block d-md-none">
+              <!-- 店家 -->
+              <section class="card mb-5">
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-auto" style="max-width: 100px">
+                      <img
+                        src="https://hexschool.github.io/boootstrap5WebLayout/assets/store_img.jpg"
+                        class="
+                          img-fluid
+                          rounded-circle
+                          border border-2 border-primary
+                        "
+                      />
+                    </div>
+                    <div class="col align-self-center">
+                      <h2 class="card-title h5 fw-medium spacing-2">
+                        缺錢事務所
+                      </h2>
+                      <p class="card-subtitle spacing-1">已發起 1 個專案</p>
+                    </div>
+                    <div class="col-12">
+                      <p class="spacing-1">
+                        需要點錢錢做些酷酷的東西，拜託各位乾爹乾媽囉！
+                      </p>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between">
+                      <div>
+                        <a href="#" class="me-2"
+                          ><i class="fab fa-facebook-f custom-icon"></i></a
+                        ><a href="#" class="me-2"
+                          ><i class="fab fa-youtube custom-icon"></i
+                        ></a>
+                      </div>
+                      <div>
+                        <button
+                          class="btn btn-outline-secondary btn-sm rounded-pill"
+                        >
+                          <i class="far fa-comment-dots fa-xs"></i>
+                          聯絡我們
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <h2
+                class="
+                  h5
+                  bg-light
+                  border-start border-end border-3 border-primary
+                  text-center
+                  spacing-2
+                  py-1
+                  mb-3
+                "
+              >
+                選擇一個方案來支持
+              </h2>
+              <!-- 方案 -->
+              <ul class="list-unstyled">
+                <li class="card mb-3 rounded-top-4">
+                  <img
+                    src="https://hexschool.github.io/boootstrap5WebLayout/assets/plan_img.jpg"
+                    class="card-img-top rounded-top-4"
+                  />
+                  <div class="card-body pt-2">
+                    <p
+                      class="
+                        card-text
+                        pb-2
+                        mb-2
+                        border-bottom
+                        d-flex
+                        justify-content-between
+                      "
+                    >
+                      <small class="text-dark spacing-2">限時優惠</small>
+                      <small class="text-dark font-baloo"
+                        >2 days 20:05:20</small
+                      >
+                    </p>
+                    <p class="card-title h5 mb-0">買一送一，只有兩百組別錯過</p>
+                    <p class="fs-4 font-baloo fw-bold">NT$ 1600</p>
+                    <div class="mb-2">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-lightgrey text-secondary fs-8"
+                        >已被贊助88次</a
+                      >
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-secondary text-white fs-8"
+                        >限量200個</a
+                      >
+                    </div>
+                    <p class="card-text text-secondary mb-3">
+                      受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。
+                    </p>
+                    <a
+                      href="#sponsor"
+                      class="btn btn-primary rounded-pill w-100 stretched-link"
+                      >贊助</a
+                    >
+                  </div>
+                </li>
+                <li class="card mb-3 rounded-top-4">
+                  <img
+                    src="https://hexschool.github.io/boootstrap5WebLayout/assets/plan_img.jpg"
+                    class="card-img-top rounded-top-4"
+                  />
+                  <div class="card-body pt-2">
+                    <p
+                      class="
+                        card-text
+                        pb-2
+                        mb-2
+                        border-bottom
+                        d-flex
+                        justify-content-between
+                      "
+                    >
+                      <small class="text-dark spacing-2">限時優惠</small>
+                      <small class="text-dark font-baloo"
+                        >2 days 20:05:20</small
+                      >
+                    </p>
+                    <p class="card-title h5 mb-0">買一送一，只有兩百組別錯過</p>
+                    <p class="fs-4 font-baloo fw-bold">NT$ 1600</p>
+                    <div class="mb-2">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-lightgrey text-secondary fs-8"
+                        >已被贊助88次</a
+                      >
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-secondary text-white fs-8"
+                        >限量200個</a
+                      >
+                    </div>
+                    <p class="card-text text-secondary mb-3">
+                      受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。
+                    </p>
+                    <a
+                      href="#sponsor"
+                      class="btn btn-primary rounded-pill w-100 stretched-link"
+                      >贊助</a
+                    >
+                  </div>
+                </li>
+                <li class="card mb-3 rounded-top-4">
+                  <img
+                    src="https://hexschool.github.io/boootstrap5WebLayout/assets/plan_img.jpg"
+                    class="card-img-top rounded-top-4"
+                  />
+                  <div class="card-body pt-2">
+                    <p
+                      class="
+                        card-text
+                        pb-2
+                        mb-2
+                        border-bottom
+                        d-flex
+                        justify-content-between
+                      "
+                    >
+                      <small class="text-dark spacing-2">限時優惠</small>
+                      <small class="text-dark font-baloo"
+                        >2 days 20:05:20</small
+                      >
+                    </p>
+                    <p class="card-title h5 mb-0">買一送一，只有兩百組別錯過</p>
+                    <p class="fs-4 font-baloo fw-bold">NT$ 1600</p>
+                    <div class="mb-2">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-lightgrey text-secondary fs-8"
+                        >已被贊助88次</a
+                      >
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-secondary text-white fs-8"
+                        >限量200個</a
+                      >
+                    </div>
+                    <p class="card-text text-secondary mb-3">
+                      受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。
+                    </p>
+                    <a
+                      href="#sponsor"
+                      class="btn btn-primary rounded-pill w-100 stretched-link"
+                      >贊助</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </section>
             <!-- 募資 -->
-            <section id="sponser">
+            <section id="sponsor">
               <img
                 src="https://hexschool.github.io/boootstrap5WebLayout/assets/icon_heart.svg"
                 alt="愛心圖示"
@@ -975,7 +1190,7 @@
               </form>
             </section>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 d-none d-md-block">
             <!-- 側邊欄 -->
             <aside>
               <!-- 店家 -->
