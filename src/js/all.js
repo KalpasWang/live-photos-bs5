@@ -12,12 +12,13 @@ loginModal.addEventListener('shown.bs.modal', function () {
 // 釘選下選單顯示判斷
 sponsorBtn.classList.add('d-none');
 window.addEventListener('scroll', function () {
-  var documentTop = document.documentElement.scrollTop + 61;
+  var documentTop =
+    document.documentElement.scrollTop + document.body.scrollTop + 61;
   var tabsTop = tabs.offsetTop;
   var tabsBottom = tabs.offsetTop + tabs.offsetHeight;
-  console.log(document.documentElement.scrollTop + 61);
-  console.log(tabs.offsetTop);
-  console.log(tabsBottom);
+  // console.log(document.documentElement.scrollTop + 61);
+  // console.log(tabs.offsetTop);
+  // console.log(tabsBottom);
   if (documentTop - tabsTop >= 0 && documentTop - tabsBottom < 0) {
     sponsorBtn.classList.remove('d-none');
   } else {
