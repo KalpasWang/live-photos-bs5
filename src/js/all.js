@@ -11,15 +11,33 @@ loginModal.addEventListener('shown.bs.modal', function () {
 
 // 釘選下選單顯示判斷
 sponsorBtn.classList.add('d-none');
+var exitIntro = false;
+var inForm = false;
+
+var options = {
+  rootMargin: '0px',
+  threshold: 0,
+};
+var introObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    exitIntro = !entry.isIntersecting;
+  });
+}, options);
+introObserver.observe(document.getElementById('intro'));
+
+var formOptions = {
+  rootMargin: '0px',
+  threshold: 0.85,
+};
+var formObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    inForm = entry.isIntersecting;
+  });
+}, formOptions);
+formObserver.observe(sponsorForm);
+
 window.addEventListener('scroll', function () {
-  var documentTop =
-    document.documentElement.scrollTop + document.body.scrollTop + 61;
-  var tabsTop = tabs.offsetTop;
-  var tabsBottom = tabs.offsetTop + tabs.offsetHeight;
-  // console.log(document.documentElement.scrollTop + 61);
-  // console.log(tabs.offsetTop);
-  // console.log(tabsBottom);
-  if (documentTop - tabsTop >= 0 && documentTop - tabsBottom < 0) {
+  if (exitIntro && !inForm) {
     sponsorBtn.classList.remove('d-none');
   } else {
     sponsorBtn.classList.add('d-none');
@@ -57,9 +75,8 @@ accordionBtns.forEach((btn) => {
   });
 });
 
-// Fetch all the forms we want to apply custom Bootstrap validation styles to
+// 客戶端表單驗證
 var forms = document.querySelectorAll('.needs-validation');
-var selectProps = document.getElementById('selectProgram');
 
 // Loop over them and prevent submission
 Array.prototype.slice.call(forms).forEach(function (form) {
