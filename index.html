@@ -1131,7 +1131,7 @@
                   >贊助專案</span
                 >
               </h2>
-              <form class="needs-validation">
+              <form class="needs-validation" novalidate>
                 <div class="mb-3">
                   <label for="selectProgram" class="form-label">贊助方案</label>
                   <select
@@ -1140,26 +1140,35 @@
                     aria-label="選擇一個方案來支持"
                     required
                   >
-                    <option selected value="-1">請選擇一個方案</option>
+                    <option selected value="">請選擇一個方案</option>
                     <option value="1">方案1</option>
                     <option value="2">方案2</option>
                     <option value="3">方案3</option>
                   </select>
+                  <div class="invalid-feedback">請選擇一個方案</div>
                 </div>
 
                 <div class="mb-3">
                   <label for="name" class="form-label">收件人姓名</label>
                   <input type="text" class="form-control" id="name" required />
+                  <div class="invalid-feedback">請輸入收件人姓名</div>
                 </div>
 
                 <div class="mb-3">
                   <label for="phone" class="form-label">聯絡電話</label>
-                  <input type="text" class="form-control" id="phone" required />
+                  <input type="tel" class="form-control" id="phone" required />
+                  <div class="invalid-feedback">請輸入聯絡電話</div>
                 </div>
 
                 <div class="mb-3">
                   <label for="email" class="form-label">連絡信箱</label>
-                  <input type="text" class="form-control" id="email" required />
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                  <div class="invalid-feedback">請輸入正確的Email</div>
                 </div>
 
                 <div class="mb-4">
